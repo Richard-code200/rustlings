@@ -8,6 +8,7 @@ fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
 
 fn main() {
     // 你可以在这里自由尝试。
+    let x = 1;
 }
 
 #[cfg(test)]
