@@ -1,14 +1,14 @@
-// A list of scores (one per line) of a soccer match is given. Each line is of
-// the form "<team_1_name>,<team_2_name>,<team_1_goals>,<team_2_goals>"
-// Example: "England,France,4,2" (England scored 4 goals, France 2).
+// 给定一份足球比赛比分列表，每行一场比赛，格式为：
+// "<球队1名称>,<球队2名称>,<球队1进球数>,<球队2进球数>"
+// 例如："England,France,4,2"（英格兰进 4 球，法国进 2 球）。
 //
-// You have to build a scores table containing the name of the team, the total
-// number of goals the team scored, and the total number of goals the team
-// conceded.
+// 请构建一张统计表，记录每支球队的名称、
+// 总进球数
+// 和总失球数。
 
 use std::collections::HashMap;
 
-// A structure to store the goal details of a team.
+// 用于存储一支球队进球和失球详情的结构体。
 #[derive(Default)]
 struct TeamScores {
     goals_scored: u8,
@@ -16,28 +16,28 @@ struct TeamScores {
 }
 
 fn build_scores_table(results: &str) -> HashMap<&str, TeamScores> {
-    // The name of the team is the key and its associated struct is the value.
+    // 键为球队名称，值为对应的结构体。
     let mut scores = HashMap::<&str, TeamScores>::new();
 
     for line in results.lines() {
         let mut split_iterator = line.split(',');
-        // NOTE: We use `unwrap` because we didn't deal with error handling yet.
+        // 注意：我们还没有学习错误处理，所以这里使用 `unwrap`。
         let team_1_name = split_iterator.next().unwrap();
         let team_2_name = split_iterator.next().unwrap();
         let team_1_score: u8 = split_iterator.next().unwrap().parse().unwrap();
         let team_2_score: u8 = split_iterator.next().unwrap().parse().unwrap();
 
-        // TODO: Populate the scores table with the extracted details.
-        // Keep in mind that goals scored by team 1 will be the number of goals
-        // conceded by team 2. Similarly, goals scored by team 2 will be the
-        // number of goals conceded by team 1.
+        // TODO: 将提取出的详细信息填入统计表。
+        // 注意：球队 1 的进球数就是球队 2 的失球数。
+        // 同样，球队 2 的进球数
+        // 就是球队 1 的失球数。
     }
 
     scores
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]
@@ -54,9 +54,11 @@ England,Spain,1,0";
     fn build_scores() {
         let scores = build_scores_table(RESULTS);
 
-        assert!(["England", "France", "Germany", "Italy", "Poland", "Spain"]
-            .into_iter()
-            .all(|team_name| scores.contains_key(team_name)));
+        assert!(
+            ["England", "France", "Germany", "Italy", "Poland", "Spain"]
+                .into_iter()
+                .all(|team_name| scores.contains_key(team_name))
+        );
     }
 
     #[test]

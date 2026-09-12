@@ -1,9 +1,9 @@
 fn square(num: i32) -> i32 {
-    // Removed the semicolon `;` at the end of the line below to implicitly return the result.
+    // 移除下面这行末尾的分号 `;`，以隐式返回结果。
     num * num
 }
 
 fn main() {
     let answer = square(3);
-    println!("The square of 3 is {answer}");
+    println!("3 的平方是 {answer}");
 }

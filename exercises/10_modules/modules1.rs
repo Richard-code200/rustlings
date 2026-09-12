@@ -1,13 +1,13 @@
-// TODO: Fix the compiler error about calling a private function.
+// TODO: 修复调用私有函数时出现的编译错误。
 mod sausage_factory {
-    // Don't let anybody outside of this module see this!
+    // 不要让此模块外部的代码访问它！
     fn get_secret_recipe() -> String {
         String::from("Ginger")
     }
 
     pub fn make_sausage() {
         get_secret_recipe();
-        println!("sausage!");
+        println!("香肠！");
     }
 }
 

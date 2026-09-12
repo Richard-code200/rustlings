@@ -3,9 +3,9 @@ fn trim_me(input: &str) -> &str {
 }
 
 fn compose_me(input: &str) -> String {
-    // The macro `format!` has the same syntax as `println!`, but it returns a
-    // string instead of printing it to the terminal.
-    // Equivalent to `input.to_string() + " world!"`
+    // `format!` 宏的语法与 `println!` 相同，但它返回一个字符串，
+    // 而不是将内容输出到终端。
+    // 等价于 `input.to_string() + " world!"`
     format!("{input} world!")
 }
 
@@ -14,7 +14,7 @@ fn replace_me(input: &str) -> String {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

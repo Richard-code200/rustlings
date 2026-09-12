@@ -1,13 +1,13 @@
 #![allow(clippy::ptr_arg)]
 
-// Borrows instead of taking ownership.
-// It is recommended to use `&str` instead of `&String` here. But this is
-// enough for now because we didn't handle strings yet.
+// 借用数据，而不是获取所有权。
+// 这里推荐使用 `&str` 而不是 `&String`。不过我们还没有学习字符串，
+// 因此目前这样写就足够了。
 fn get_char(data: &String) -> char {
     data.chars().last().unwrap()
 }
 
-// Takes ownership instead of borrowing.
+// 获取所有权，而不是借用。
 fn string_uppercase(mut data: String) {
     data = data.to_uppercase();
 

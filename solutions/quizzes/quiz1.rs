@@ -1,7 +1,7 @@
-// Mary is buying apples. The price of an apple is calculated as follows:
-// - An apple costs 2 rustbucks.
-// - However, if Mary buys more than 40 apples, the price of each apple in the
-// entire order is reduced to only 1 rustbuck!
+// Mary 正在买苹果。苹果的价格按以下规则计算：
+// - 每个苹果 2 个 Rust 币。
+// - 如果 Mary 购买超过 40 个苹果，那么整笔订单中
+// 每个苹果的价格都降为 1 个 Rust 币！
 
 fn calculate_price_of_apples(n_apples: u64) -> u64 {
     if n_apples > 40 {
@@ -12,10 +12,10 @@ fn calculate_price_of_apples(n_apples: u64) -> u64 {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
-// Don't change the tests!
+// 请勿修改测试！
 #[cfg(test)]
 mod tests {
     use super::*;

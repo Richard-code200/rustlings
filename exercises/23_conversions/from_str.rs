@@ -1,8 +1,8 @@
-// This is similar to the previous `from_into` exercise. But this time, we'll
-// implement `FromStr` and return errors instead of falling back to a default
-// value. Additionally, upon implementing `FromStr`, you can use the `parse`
-// method on strings to generate an object of the implementor type. You can read
-// more about it in the documentation:
+// 本练习与前面的 `from_into` 类似，但这一次需要实现 `FromStr`，
+// 并在失败时返回错误，而不是回退到默认值。
+// 此外，实现 `FromStr` 后，就可以调用字符串的 `parse` 方法，
+// 生成实现该 trait 的类型的对象。
+// 更多信息请参阅文档：
 // https://doc.rust-lang.org/std/str/trait.FromStr.html
 
 use std::num::ParseIntError;
@@ -14,30 +14,30 @@ struct Person {
     age: u8,
 }
 
-// We will use this error type for the `FromStr` implementation.
+// 我们将在 `FromStr` 实现中使用此错误类型。
 #[derive(Debug, PartialEq)]
 enum ParsePersonError {
-    // Incorrect number of fields
+    // 字段数量不正确
     BadLen,
-    // Empty name field
+    // 姓名字段为空
     NoName,
-    // Wrapped error from parse::<u8>()
+    // 包装 parse::<u8>() 返回的错误
     ParseInt(ParseIntError),
 }
 
-// TODO: Complete this `FromStr` implementation to be able to parse a `Person`
-// out of a string in the form of "Mark,20".
-// Note that you'll need to parse the age component into a `u8` with something
-// like `"4".parse::<u8>()`.
+// TODO: 完成此 `FromStr` 实现，使其能够从 "Mark,20" 形式的字符串
+// 解析出一个 `Person`。
+// 注意：需要使用类似 `"4".parse::<u8>()` 的方式，
+// 将年龄部分解析为 `u8`。
 //
-// Steps:
-// 1. Split the given string on the commas present in it.
-// 2. If the split operation returns less or more than 2 elements, return the
-//    error `ParsePersonError::BadLen`.
-// 3. Use the first element from the split operation as the name.
-// 4. If the name is empty, return the error `ParsePersonError::NoName`.
-// 5. Parse the second element from the split operation into a `u8` as the age.
-// 6. If parsing the age fails, return the error `ParsePersonError::ParseInt`.
+// 步骤：
+// 1. 按逗号分割给定的字符串。
+// 2. 如果分割得到的元素数量不等于 2，
+//    则返回错误 `ParsePersonError::BadLen`。
+// 3. 使用分割后的第一个元素作为姓名。
+// 4. 如果姓名为空，则返回错误 `ParsePersonError::NoName`。
+// 5. 将分割后的第二个元素解析为 `u8`，作为年龄。
+// 6. 如果年龄解析失败，则返回错误 `ParsePersonError::ParseInt`。
 impl FromStr for Person {
     type Err = ParsePersonError;
 

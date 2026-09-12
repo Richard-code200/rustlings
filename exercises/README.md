@@ -1,6 +1,6 @@
-# Exercise to Book Chapter mapping
+# 练习与《Rust 程序设计语言》章节对应表
 
-| Exercise               | Book Chapter        |
+| 练习目录               | 书中章节            |
 | ---------------------- | ------------------- |
 | variables              | §3.1                |
 | functions              | §3.3                |
@@ -23,5 +23,5 @@
 | smart_pointers         | §15, §16.3          |
 | threads                | §16.1-3             |
 | macros                 | §20.5               |
-| clippy                 | Appendix D          |
-| conversions            | n/a                 |
+| clippy                 | 附录 D              |
+| conversions            | 无对应章节          |

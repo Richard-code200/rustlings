@@ -1,12 +1,12 @@
 fn main() {
-    // TODO: Create an array called `a` with at least 100 elements in it.
+    // TODO: 创建一个名为 `a` 的数组，其中至少包含 100 个元素。
     // let a = ???
     let a = [0; 100];
 
     if a.len() >= 100 {
-        println!("Wow, that's a big array!");
+        println!("哇，好大的数组！");
     } else {
-        println!("Meh, I eat arrays like that for breakfast.");
-        panic!("Array not big enough, more elements needed");
+        println!("这点大小的数组，对我来说只是小菜一碟。");
+        panic!("数组不够大，需要更多元素");
     }
 }

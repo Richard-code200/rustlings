@@ -1,6 +1,6 @@
-# Official Rustlings solutions
+# Rustlings 官方参考答案
 
-Before you finish an exercise, its solution file will only contain an empty `main` function.
-The content of this file will be automatically replaced by the actual solution once you finish the exercise.
+完成某道练习之前，对应的答案文件中只有一个空的 `main` 函数。
+完成练习后，系统会自动将该文件的内容替换为实际的参考答案。
 
-Note that these solutions are often only _one possibility_ to solve an exercise.
+请注意，这些参考答案通常只是完成练习的_一种可行方式_。

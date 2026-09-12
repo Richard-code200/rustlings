@@ -1,19 +1,19 @@
-// A basket of fruits in the form of a hash map needs to be defined. The key
-// represents the name of the fruit and the value represents how many of that
-// particular fruit is in the basket. You have to put at least 3 different
-// types of fruits (e.g apple, banana, mango) in the basket and the total count
-// of all the fruits should be at least 5.
+// 请使用哈希映射定义一个水果篮。键表示水果名称，
+// 值表示篮子中该种水果的数量。
+// 你需要放入至少 3 种不同的水果
+// （例如苹果、香蕉、芒果），
+// 且水果总数至少为 5。
 
 use std::collections::HashMap;
 
 fn fruit_basket() -> HashMap<String, u32> {
-    // Declare the hash map.
+    // 声明哈希映射。
     let mut basket = HashMap::new();
 
-    // Two bananas are already given for you :)
+    // 已经为你准备了两根香蕉 :)
     basket.insert(String::from("banana"), 2);
 
-    // Put more fruits in your basket.
+    // 往篮子里放入更多水果。
     basket.insert(String::from("apple"), 3);
     basket.insert(String::from("mango"), 1);
 
@@ -21,7 +21,7 @@ fn fruit_basket() -> HashMap<String, u32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

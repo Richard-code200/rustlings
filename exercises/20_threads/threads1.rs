@@ -1,7 +1,7 @@
-// This program spawns multiple threads that each runs for at least 250ms, and
-// each thread returns how much time it took to complete. The program should
-// wait until all the spawned threads have finished and should collect their
-// return values into a vector.
+// 此程序创建多个线程，每个线程至少运行 250 毫秒，
+// 并返回完成任务所花费的时间。程序应等待
+// 所有创建的线程结束，
+// 然后将它们的返回值收集到一个动态数组中。
 
 use std::{
     thread,
@@ -14,7 +14,7 @@ fn main() {
         let handle = thread::spawn(move || {
             let start = Instant::now();
             thread::sleep(Duration::from_millis(250));
-            println!("Thread {i} done");
+            println!("线程 {i} 已完成");
             start.elapsed().as_millis()
         });
         handles.push(handle);
@@ -22,16 +22,16 @@ fn main() {
 
     let mut results = Vec::new();
     for handle in handles {
-        // TODO: Collect the results of all threads into the `results` vector.
-        // Use the `JoinHandle` struct which is returned by `thread::spawn`.
+        // TODO: 将所有线程的结果收集到动态数组 `results` 中。
+        // 使用 `thread::spawn` 返回的 `JoinHandle` 结构体。
     }
 
     if results.len() != 10 {
-        panic!("Oh no! Some thread isn't done yet!");
+        panic!("糟糕！还有线程尚未完成！");
     }
 
     println!();
     for (i, result) in results.into_iter().enumerate() {
-        println!("Thread {i} took {result}ms");
+        println!("线程 {i} 用时 {result} 毫秒");
     }
 }

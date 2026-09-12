@@ -2,8 +2,8 @@ fn vec_loop(input: &[i32]) -> Vec<i32> {
     let mut output = Vec::new();
 
     for element in input {
-        // TODO: Multiply each element in the `input` slice by 2 and push it to
-        // the `output` vector.
+        // TODO: 将切片 `input` 中的每个元素乘以 2，
+        // 再追加到动态数组 `output` 中。
         output.push(element * 2);
     }
 
@@ -11,22 +11,22 @@ fn vec_loop(input: &[i32]) -> Vec<i32> {
 }
 
 fn vec_map_example(input: &[i32]) -> Vec<i32> {
-    // An example of collecting a vector after mapping.
-    // We map each element of the `input` slice to its value plus 1.
-    // If the input is `[1, 2, 3]`, the output is `[2, 3, 4]`.
+    // 这是映射后收集为动态数组的示例。
+    // 将切片 `input` 中的每个元素映射为原值加 1。
+    // 如果输入是 `[1, 2, 3]`，输出就是 `[2, 3, 4]`。
     input.iter().map(|element| element + 1).collect()
 }
 
 fn vec_map(input: &[i32]) -> Vec<i32> {
-    // TODO: Here, we also want to multiply each element in the `input` slice
-    // by 2, but with iterator mapping instead of manually pushing into an empty
-    // vector.
-    // See the example in the function `vec_map_example` above.
+    // TODO: 这里同样需要将切片 `input` 中的每个元素乘以 2，
+    // 但要使用迭代器映射，而不是手动将元素追加到
+    // 一个空的动态数组中。
+    // 请参考上面的 `vec_map_example` 函数。
     input.iter().map(|element| element * 2).collect()
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

@@ -1,3 +1,3 @@
-# Quizzes
+# 综合测验
 
-After every couple of sections, there will be a quiz in this directory that'll test your knowledge on a bunch of sections at once.
+每学习几个章节，本目录中就会有一道综合测验，同时考查你对多个章节知识的掌握情况。

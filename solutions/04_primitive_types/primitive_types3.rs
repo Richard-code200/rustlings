@@ -1,11 +1,11 @@
 fn main() {
-    // An array with 100 elements of the value 42.
+    // 一个包含 100 个元素的数组，每个元素的值均为 42。
     let a = [42; 100];
 
     if a.len() >= 100 {
-        println!("Wow, that's a big array!");
+        println!("哇，好大的数组！");
     } else {
-        println!("Meh, I eat arrays like that for breakfast.");
-        panic!("Array not big enough, more elements needed");
+        println!("这点大小的数组，对我来说只是小菜一碟。");
+        panic!("数组不够大，需要更多元素");
     }
 }

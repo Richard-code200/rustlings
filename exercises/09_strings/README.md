@@ -1,9 +1,9 @@
-# Strings
+# 字符串
 
-Rust has two string types, a string slice (`&str`) and an owned string (`String`).
-We're not going to dictate when you should use which one, but we'll show you how
-to identify and create them, as well as use them.
+Rust 中有两种常见的字符串形式：字符串切片（`&str`）和拥有所有权的字符串（`String`）。
+这里不会硬性规定何时使用哪一种，
+而是介绍如何识别、创建和使用它们。
 
-## Further information
+## 延伸阅读
 
-- [Strings](https://doc.rust-lang.org/book/ch08-02-strings.html)
+- [字符串](https://doc.rust-lang.org/book/ch08-02-strings.html)

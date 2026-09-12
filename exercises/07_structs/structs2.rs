@@ -22,7 +22,7 @@ fn create_order_template() -> Order {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]
@@ -33,7 +33,7 @@ mod tests {
     fn your_order() {
         let order_template = create_order_template();
 
-        // TODO: Create your own order using the update syntax and template above!
+        // TODO: 使用结构体更新语法和上面的模板，创建你自己的订单！
         // let your_order =
         let your_order = Order {
             name: String::from("Hacker in Rust"),

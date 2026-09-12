@@ -1,6 +1,6 @@
-// TODO: Change the line below to fix the compiler error.
+// TODO: 修改下面这一行，修复编译错误。
 const NUMBER: i32 = 3;
 
 fn main() {
-    println!("Number: {NUMBER}");
+    println!("数值：{NUMBER}");
 }

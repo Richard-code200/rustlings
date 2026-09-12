@@ -1,12 +1,12 @@
-// We're collecting different fruits to bake a delicious fruit cake. For this,
-// we have a basket, which we'll represent in the form of a hash map. The key
-// represents the name of each fruit we collect and the value represents how
-// many of that particular fruit we have collected. Three types of fruits -
-// Apple (4), Mango (2) and Lychee (5) are already in the basket hash map. You
-// must add fruit to the basket so that there is at least one of each kind and
-// more than 11 in total - we have a lot of mouths to feed. You are not allowed
-// to insert any more of the fruits that are already in the basket (Apple,
-// Mango, and Lychee).
+// 我们正在收集各种水果，准备烤一个美味的水果蛋糕。
+// 用哈希映射来表示水果篮：键表示水果名称，
+// 值表示已收集的该种水果的数量。
+// 篮子里已经有三种水果：
+// 苹果 Apple（4 个）、芒果 Mango（2 个）和荔枝 Lychee（5 个）。
+// 请继续添加水果，确保每一种至少有 1 个，
+// 且总数超过 11 个——毕竟有很多人等着吃呢。
+// 不允许继续添加篮子中已有的水果
+// （Apple、Mango 和 Lychee）。
 
 use std::collections::HashMap;
 
@@ -29,21 +29,22 @@ fn fruit_basket(basket: &mut HashMap<Fruit, u32>) {
     ];
 
     for fruit in fruit_kinds {
-        // TODO: Insert new fruits if they are not already present in the
-        // basket. Note that you are not allowed to put any type of fruit that's
-        // already present!
+        // TODO: 如果篮子里还没有某种水果，就将其添加进去。
+        // 注意：不允许添加篮子中
+        // 已有的任何种类的水果！
+        basket.entry(fruit).or_insert(1);
     }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]
 mod tests {
     use super::*;
 
-    // Don't modify this function!
+    // 请勿修改此函数！
     fn get_fruit_basket() -> HashMap<Fruit, u32> {
         let content = [(Fruit::Apple, 4), (Fruit::Mango, 2), (Fruit::Lychee, 5)];
         HashMap::from_iter(content)
@@ -89,7 +90,7 @@ mod tests {
 
         for fruit_kind in fruit_kinds {
             let Some(amount) = basket.get(&fruit_kind) else {
-                panic!("Fruit kind {fruit_kind:?} was not found in basket");
+                panic!("篮子中没有找到水果种类 {fruit_kind:?}");
             };
             assert!(*amount > 0);
         }

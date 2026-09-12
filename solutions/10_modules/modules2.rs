@@ -1,5 +1,5 @@
 mod delicious_snacks {
-    // Added `pub` and used the expected alias after `as`.
+    // 添加 `pub`，并在 `as` 后使用所需的别名。
     pub use self::fruits::PEAR as fruit;
     pub use self::veggies::CUCUMBER as veggie;
 
@@ -16,7 +16,7 @@ mod delicious_snacks {
 
 fn main() {
     println!(
-        "favorite snacks: {} and {}",
+        "最喜欢的零食：{} 和 {}",
         delicious_snacks::fruit,
         delicious_snacks::veggie,
     );

@@ -1,4 +1,4 @@
-// TODO: Fix the compiler error in this function.
+// TODO: 修复此函数中的编译错误。
 fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
     let mut vec = vec;
 
@@ -8,7 +8,7 @@ fn fill_vec(vec: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

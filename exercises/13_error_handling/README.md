@@ -1,12 +1,12 @@
-# Error handling
+# 错误处理
 
-Most errors aren't serious enough to require the program to stop entirely.
-Sometimes, when a function fails, it's for a reason that you can easily interpret and respond to.
-For example, if you try to open a file and that operation fails because the file doesn't exist, you might want to create the file instead of terminating the process.
+大多数错误并没有严重到需要让整个程序停止运行。
+有时，函数失败的原因很容易理解，也很容易采取相应措施。
+例如，尝试打开文件时，如果操作因为文件不存在而失败，你可能希望创建该文件，而不是终止进程。
 
-## Further information
+## 延伸阅读
 
-- [Error Handling](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html)
-- [Generics](https://doc.rust-lang.org/book/ch10-01-syntax.html)
+- [错误处理](https://doc.rust-lang.org/book/ch09-02-recoverable-errors-with-result.html)
+- [泛型](https://doc.rust-lang.org/book/ch10-01-syntax.html)
 - [Result](https://doc.rust-lang.org/rust-by-example/error/result.html)
-- [Boxing errors](https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html)
+- [使用 Box 包装错误](https://doc.rust-lang.org/rust-by-example/error/multiple_error_types/boxing_errors.html)

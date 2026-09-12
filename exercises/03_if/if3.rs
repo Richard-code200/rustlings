@@ -1,5 +1,5 @@
 fn animal_habitat(animal: &str) -> &str {
-    // TODO: Fix the compiler error in the statement below.
+    // TODO: 修复下面这条语句的编译错误。
     let identifier = if animal == "crab" {
         1
     } else if animal == "gopher" {
@@ -10,7 +10,7 @@ fn animal_habitat(animal: &str) -> &str {
         0
     };
 
-    // Don't change the expression below!
+    // 请勿修改下面的表达式！
     if identifier == 1 {
         "Beach"
     } else if identifier == 2 {
@@ -23,10 +23,10 @@ fn animal_habitat(animal: &str) -> &str {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
-// Don't change the tests!
+// 请勿修改测试！
 #[cfg(test)]
 mod tests {
     use super::*;

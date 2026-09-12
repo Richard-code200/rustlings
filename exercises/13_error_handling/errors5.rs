@@ -1,15 +1,15 @@
-// This exercise is an altered version of the `errors4` exercise. It uses some
-// concepts that we won't get to until later in the course, like `Box` and the
-// `From` trait. It's not important to understand them in detail right now, but
-// you can read ahead if you like. For now, think of the `Box<dyn ???>` type as
-// an "I want anything that does ???" type.
+// 本练习是 `errors4` 的变体，用到了一些后面才会学习的概念，
+// 例如 `Box` 和 `From` trait。
+// 目前不必详细理解这些概念，感兴趣的话也可以提前阅读。
+// 现在可以把 `Box<dyn ???>` 理解为这样一种类型：
+// “我需要任何具备 ??? 能力的值”。
 //
-// In short, this particular use case for boxes is for when you want to own a
-// value and you care only that it is a type which implements a particular
-// trait. To do so, the `Box` is declared as of type `Box<dyn Trait>` where
-// `Trait` is the trait the compiler looks for on any value used in that
-// context. For this exercise, that context is the potential errors which
-// can be returned in a `Result`.
+// 简而言之，这种 `Box` 用法适用于以下情况：你希望拥有某个值，
+// 但只关心它的类型是否实现了某个特定的 trait。
+// 为此，可以将 `Box` 声明为 `Box<dyn Trait>`，
+// 其中 `Trait` 是编译器要求该上下文中的值必须实现的 trait。
+// 在本练习中，这些值就是
+// 可能通过 `Result` 返回的各种错误。
 
 use std::error::Error;
 use std::fmt;
@@ -20,12 +20,12 @@ enum CreationError {
     Zero,
 }
 
-// This is required so that `CreationError` can implement `Error`.
+// 为了让 `CreationError` 能够实现 `Error`，必须提供此实现。
 impl fmt::Display for CreationError {
     fn fmt(&self, f: &mut fmt::Formatter) -> fmt::Result {
         let description = match *self {
-            CreationError::Negative => "number is negative",
-            CreationError::Zero => "number is zero",
+            CreationError::Negative => "数值为负数",
+            CreationError::Zero => "数值为零",
         };
         f.write_str(description)
     }
@@ -46,11 +46,11 @@ impl PositiveNonzeroInteger {
     }
 }
 
-// TODO: Add the correct return type `Result<(), Box<dyn ???>>`. What can we
-// use to describe both errors? Is there a trait which both errors implement?
+// TODO: 添加正确的返回类型 `Result<(), Box<dyn ???>>`。可以用什么
+// 来描述这两种错误？它们是否实现了某个共同的 trait？
 fn main() {
     let pretend_user_input = "42";
     let x: i64 = pretend_user_input.parse()?;
-    println!("output={:?}", PositiveNonzeroInteger::new(x)?);
+    println!("输出={:?}", PositiveNonzeroInteger::new(x)?);
     Ok(())
 }

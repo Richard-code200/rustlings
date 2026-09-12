@@ -6,7 +6,7 @@ struct Point {
 
 #[derive(Debug)]
 enum Message {
-    // TODO: Define the different variants used below.
+    // TODO: 定义下方代码使用的各个枚举变体。
     Resize { width: u64, height: u64 },
     Move(Point),
     Echo(String),

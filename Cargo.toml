@@ -192,7 +192,7 @@ bin = [
 [package]
 name = "exercises"
 edition = "2024"
-# Don't publish the exercises on crates.io!
+# 请勿将这些练习发布到 crates.io！
 publish = false
 
 [profile.release]
@@ -202,21 +202,21 @@ panic = "abort"
 panic = "abort"
 
 [lints.rust]
-# You shouldn't write unsafe code in Rustlings!
+# 在 Rustlings 中不应编写 unsafe 代码！
 unsafe_code = "forbid"
-# You don't need unstable features in Rustlings and shouldn't rely on them while learning Rust.
+# Rustlings 不需要不稳定特性，学习 Rust 时也不应依赖它们。
 unstable_features = "forbid"
-# Dead code warnings can't be avoided in some exercises and might distract while learning.
+# 某些练习无法避免未使用代码的警告，而这些警告可能干扰学习。
 dead_code = "allow"
 
 [lints.clippy]
-# You forgot a `todo!()`!
+# 你忘记替换某个 `todo!()` 了！
 todo = "forbid"
-# This can only happen by mistake in Rustlings.
+# 在 Rustlings 中，这种情况只可能是误写。
 empty_loop = "forbid"
-# No infinite loops are needed in Rustlings.
+# Rustlings 中不需要无限循环。
 infinite_loop = "deny"
-# You shouldn't leak memory while still learning Rust!
+# 学习 Rust 时不应造成内存泄漏！
 mem_forget = "deny"
-# Currently, there are no disallowed methods. This line avoids problems when developing Rustlings.
+# 目前没有被禁止的方法。此设置用于避免开发 Rustlings 时出现问题。
 disallowed_methods = "allow"

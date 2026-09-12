@@ -6,12 +6,12 @@ fn animal_habitat(animal: &str) -> &str {
     } else if animal == "snake" {
         3
     } else {
-        // Any unused identifier.
+        // 任意尚未使用的标识值。
         4
     };
 
-    // Instead of such an identifier, you would use an enum in Rust.
-    // But we didn't get into enums yet.
+    // 在 Rust 中，通常应使用枚举来代替这样的标识值。
+    // 不过，我们还没有学习枚举。
     if identifier == 1 {
         "Beach"
     } else if identifier == 2 {
@@ -24,7 +24,7 @@ fn animal_habitat(animal: &str) -> &str {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

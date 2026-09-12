@@ -1,5 +1,5 @@
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]
@@ -8,10 +8,10 @@ mod tests {
     fn move_semantics4() {
         let mut x = Vec::new();
         let y = &mut x;
-        // `y` used here.
+        // 在这里使用 `y`。
         y.push(42);
-        // The mutable reference `y` is not used anymore,
-        // therefore a new reference can be created.
+        // 可变引用 `y` 此后不再使用，
+        // 因此可以创建新的引用。
         let z = &mut x;
         z.push(13);
         assert_eq!(x, [42, 13]);

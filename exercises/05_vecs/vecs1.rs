@@ -1,8 +1,8 @@
 fn array_and_vec() -> ([i32; 4], Vec<i32>) {
-    let a = [10, 20, 30, 40]; // Array
+    let a = [10, 20, 30, 40]; // 数组
 
-    // TODO: Create a vector called `v` which contains the exact same elements as in the array `a`.
-    // Use the vector macro.
+    // TODO: 创建一个名为 `v` 的动态数组，包含与数组 `a` 完全相同的元素。
+    // 请使用创建动态数组的宏。
     // let v = ???;
     let v = vec![10, 20, 30, 40];
 
@@ -10,7 +10,7 @@ fn array_and_vec() -> ([i32; 4], Vec<i32>) {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

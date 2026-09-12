@@ -1,4 +1,4 @@
 fn main() {
-    // DON'T EDIT THIS SOLUTION FILE!
-    // It will be automatically filled after you finish the exercise.
+    // 请勿编辑此答案文件！
+    // 完成练习后，系统会自动填入参考答案。
 }

@@ -1,4 +1,4 @@
-// TODO: Fix the compiler error in the function without adding any new line.
+// TODO: 修复函数中的编译错误，但不要添加新行。
 fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
     vec.push(88);
 
@@ -6,7 +6,7 @@ fn fill_vec(mut vec: Vec<i32>) -> Vec<i32> {
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]

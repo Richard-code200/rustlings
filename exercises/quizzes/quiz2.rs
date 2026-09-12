@@ -1,21 +1,21 @@
-// This is a quiz for the following sections:
-// - Strings
-// - Vecs
-// - Move semantics
-// - Modules
-// - Enums
+// 本测验涵盖以下章节：
+// - 字符串
+// - 动态数组
+// - 移动语义
+// - 模块
+// - 枚举
 //
-// Let's build a little machine in the form of a function. As input, we're going
-// to give a list of strings and commands. These commands determine what action
-// is going to be applied to the string. It can either be:
-// - Uppercase the string
-// - Trim the string
-// - Append "bar" to the string a specified amount of times
+// 我们来用函数构建一个小型处理器。输入是一个包含字符串和命令的列表。
+// 命令决定对字符串执行何种操作，
+// 可以是以下操作之一：
+// - 将字符串转换为大写
+// - 移除字符串两端的空白字符
+// - 在字符串后追加指定次数的 "bar"
 //
-// The exact form of this will be:
-// - The input is going to be a Vector of 2-length tuples,
-//   the first element is the string, the second one is the command.
-// - The output element is going to be a vector of strings.
+// 具体形式如下：
+// - 输入是一个动态数组，其中每个元素都是二元组，
+//   元组的第一个元素是字符串，第二个元素是命令。
+// - 输出是一个字符串动态数组。
 
 enum Command {
     Uppercase,
@@ -26,17 +26,17 @@ enum Command {
 mod my_module {
     use super::Command;
 
-    // TODO: Complete the function as described above.
+    // TODO: 按照上面的说明完成函数。
     // pub fn transformer(input: ???) -> ??? { ??? }
 }
 
 fn main() {
-    // You can optionally experiment here.
+    // 你可以在这里自由尝试。
 }
 
 #[cfg(test)]
 mod tests {
-    // TODO: What do we need to import to have `transformer` in scope?
+    // TODO: 需要导入什么，才能在当前作用域中使用 `transformer`？
     // use ???;
     use super::Command;
 

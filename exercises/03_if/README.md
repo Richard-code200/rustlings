@@ -1,7 +1,7 @@
-# If
+# if 条件表达式
 
-`if`, the most basic (but still surprisingly versatile!) type of control flow, is what you'll learn here.
+本节将学习 `if`：最基础、却也十分灵活的控制流形式。
 
-## Further information
+## 延伸阅读
 
-- [Control Flow - if expressions](https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions)
+- [控制流——if 表达式](https://doc.rust-lang.org/book/ch03-05-control-flow.html#if-expressions)
