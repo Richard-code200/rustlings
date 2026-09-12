@@ -26,8 +26,16 @@ enum Command {
 mod my_module {
     use super::Command;
 
-    // TODO: 按照上面的说明完成函数。
-    // pub fn transformer(input: ???) -> ??? { ??? }
+    pub fn transformer(input: Vec<(String, Command)>) -> Vec<String> {
+        input
+            .into_iter()
+            .map(|(s, cmd)| match cmd {
+                Command::Uppercase => s.to_uppercase(),
+                Command::Trim => s.trim().to_string(),
+                Command::Append(n) => s + &"bar".repeat(n),
+            })
+            .collect()
+    }
 }
 
 fn main() {
