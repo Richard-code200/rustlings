@@ -47,6 +47,7 @@ mod tests {
     // TODO: 需要导入什么，才能在当前作用域中使用 `transformer`？
     // use ???;
     use super::Command;
+    use crate::my_module::transformer;
 
     #[test]
     fn it_works() {

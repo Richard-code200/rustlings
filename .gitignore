@@ -2,3 +2,6 @@ Cargo.lock
 target/
 .vscode/
 .claude
+learning-records/
+MISSION.md
+NOTES.md

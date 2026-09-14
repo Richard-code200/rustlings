@@ -4,6 +4,13 @@
 // 如果 `hour_of_day` 大于 23，则返回 `None`。
 fn maybe_ice_cream(hour_of_day: u16) -> Option<u16> {
     // TODO: 完成函数体。
+    if hour_of_day > 23 {
+        None
+    } else if hour_of_day >= 22 {
+        Some(0)
+    } else {
+        Some(5)
+    }
 }
 
 fn main() {
@@ -18,7 +25,7 @@ mod tests {
     fn raw_value() {
         // TODO: 修复此测试。如何取出
         // Option 中包含的值？
-        let ice_creams = maybe_ice_cream(12);
+        let ice_creams = maybe_ice_cream(12).unwrap();
 
         assert_eq!(ice_creams, 5); // 请勿修改这一行。
     }

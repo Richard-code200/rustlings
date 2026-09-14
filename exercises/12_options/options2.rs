@@ -1,4 +1,4 @@
-fn main() {
+fn main() word{
     // 你可以在这里自由尝试。
 }
 
@@ -10,8 +10,11 @@ mod tests {
         let optional_target = Some(target);
 
         // TODO: 将其改为匹配 `Some` 值的 if-let 语句。
-        word = optional_target {
-            assert_eq!(word, target);
+        // word = optional_target {
+        //     assert_eq!(word, target);
+        // }
+        if let Some(word) = optional_target {
+            assert_eq!(word, target)
         }
     }
 
@@ -29,7 +32,11 @@ mod tests {
         // TODO: 将其改为 while-let 语句。注意，`Vec::pop()`
         // 会额外包裹一层 `Option`。可以在 if-let 和 while-let
         // 语句中使用嵌套模式匹配。
-        integer = optional_integers.pop() {
+        // integer = optional_integers.pop() {
+        //     assert_eq!(integer, cursor);
+        //     cursor -= 1;
+        // }
+        while let Some(Some(integer)) = optional_integers.pop() {
             assert_eq!(integer, cursor);
             cursor -= 1;
         }
