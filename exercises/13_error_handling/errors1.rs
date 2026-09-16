@@ -4,12 +4,12 @@
 // 可以用来表示错误情况。请修改函数签名和函数体，
 // 使其返回 `Result<String, String>`，
 // 而不是 `Option<String>`。
-fn generate_nametag_text(name: String) -> Option<String> {
+fn generate_nametag_text(name: String) -> Result<String, String> {
     if name.is_empty() {
         // 不允许使用空姓名
-        None
+        Err("Empty names aren't allowed".to_string())
     } else {
-        Some(format!("Hi! My name is {name}"))
+        Ok(format!("Hi! My name is {name}"))
     }
 }
 

@@ -1,4 +1,4 @@
-fn main() word{
+fn main() {
     // 你可以在这里自由尝试。
 }
 
