@@ -48,7 +48,7 @@ impl PositiveNonzeroInteger {
 
 // TODO: 添加正确的返回类型 `Result<(), Box<dyn ???>>`。可以用什么
 // 来描述这两种错误？它们是否实现了某个共同的 trait？
-fn main() {
+fn main() -> Result<(), Box<dyn Error>> {
     let pretend_user_input = "42";
     let x: i64 = pretend_user_input.parse()?;
     println!("输出={:?}", PositiveNonzeroInteger::new(x)?);
