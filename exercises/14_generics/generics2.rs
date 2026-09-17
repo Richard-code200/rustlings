@@ -1,12 +1,12 @@
 // 这个强大的包装类型能够存储一个正整数值。
 // TODO: 使用泛型重写它，使其支持包装任意类型。
-struct Wrapper {
-    value: u32,
+struct Wrapper<T> {
+    value: T,
 }
 
 // TODO: 调整此结构体的实现，使被包装的值也使用泛型。
-impl Wrapper {
-    fn new(value: u32) -> Self {
+impl<T> Wrapper<T> {
+    fn new(value: T) -> Self {
         Wrapper { value }
     }
 }

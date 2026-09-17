@@ -6,7 +6,7 @@ fn main() {
     // TODO: 为动态数组标注类型 `Vec<T>`，修复编译错误。
     // 为 `T` 选择一种整数类型，要求它既能从 `u8` 转换而来，
     // 也能从 `i8` 转换而来。
-    let mut numbers = Vec::new();
+    let mut numbers: Vec<i32> = Vec::new();
 
     // 请勿修改下面的代码。
     let n1: u8 = 42;

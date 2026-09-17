@@ -4,6 +4,12 @@ trait AppendBar {
 
 // TODO: 为字符串动态数组实现 `AppendBar` trait。
 // `append_bar` 应将字符串 "Bar" 追加到动态数组中。
+impl AppendBar for Vec<String> {
+    fn append_bar(mut self) -> Self {
+        self.push("Bar".to_string());
+        self
+    }
+}
 
 fn main() {
     // 你可以在这里自由尝试。
