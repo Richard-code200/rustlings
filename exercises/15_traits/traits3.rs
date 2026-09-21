@@ -3,7 +3,9 @@ trait Licensed {
     // 让下面这两个结构体等实现者能够共享默认行为，
     // 无需重复编写此函数。
     // 默认许可信息应为字符串 "Default license"。
-    fn licensing_info(&self) -> String;
+    fn licensing_info(&self) -> String {
+        "Default license".to_string()
+    }
 }
 
 struct SomeSoftware {

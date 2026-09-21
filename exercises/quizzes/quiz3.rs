@@ -11,19 +11,21 @@
 // 请对 `ReportCard` 结构体及其 impl 块做必要的修改，
 // 使其在支持数字成绩单的同时，也支持字母成绩单。
 
+use std::fmt::Display;
+
 // TODO: 按照上面的说明调整结构体。
-struct ReportCard {
-    grade: f32,
+struct ReportCard<T> {
+    grade: T,
     student_name: String,
     student_age: u8,
 }
 
 // TODO: 按照上面的说明调整 impl 块。
-impl ReportCard {
+impl<T: Display> ReportCard<T> {
     fn print(&self) -> String {
         format!(
             "{} ({}) - achieved a grade of {}",
-            &self.student_name, &self.student_age, &self.grade,
+            self.student_name, self.student_age, self.grade,
         )
     }
 }
