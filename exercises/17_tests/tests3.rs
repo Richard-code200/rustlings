@@ -29,13 +29,14 @@ mod tests {
         // TODO: 此测试应检查矩形的尺寸
         // 是否与传给构造函数的尺寸一致。
         let rect = Rectangle::new(10, 20);
-        assert_eq!(todo!(), 10); // 检查宽度
-        assert_eq!(todo!(), 20); // 检查高度
+        assert_eq!(rect.width, 10); // 检查宽度
+        assert_eq!(rect.height, 20); // 检查高度
     }
 
     // TODO: 此测试应检查尝试创建宽度为负数的矩形时，
     // 程序是否触发 panic。
     #[test]
+    #[should_panic]
     fn negative_width() {
         let _rect = Rectangle::new(-10, 10);
     }
@@ -43,6 +44,7 @@ mod tests {
     // TODO: 此测试应检查尝试创建高度为负数的矩形时，
     // 程序是否触发 panic。
     #[test]
+    #[should_panic]
     fn negative_height() {
         let _rect = Rectangle::new(10, -10);
     }

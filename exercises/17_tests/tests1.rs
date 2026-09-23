@@ -13,11 +13,11 @@ fn main() {
 mod tests {
     // TODO: 导入 `is_even`。可以使用通配符，
     // 导入外层模块中的所有内容。
-
+    use super::is_even;
     #[test]
     fn you_can_assert() {
         // TODO: 使用一些值测试 `is_even` 函数。
-        assert!();
-        assert!();
+        assert!(is_even(2));
+        assert!(!is_even(3));
     }
 }
