@@ -60,17 +60,17 @@ mod tests {
         jupiter.details();
 
         // TODO
-        let saturn = Planet::Saturn(Rc::new(Sun));
+        let saturn = Planet::Saturn(Rc::clone(&sun));
         println!("引用计数 = {}", Rc::strong_count(&sun)); // 7 个引用
         saturn.details();
 
         // TODO
-        let uranus = Planet::Uranus(Rc::new(Sun));
+        let uranus = Planet::Uranus(Rc::clone(&sun));
         println!("引用计数 = {}", Rc::strong_count(&sun)); // 8 个引用
         uranus.details();
 
         // TODO
-        let neptune = Planet::Neptune(Rc::new(Sun));
+        let neptune = Planet::Neptune(Rc::clone(&sun));
         println!("引用计数 = {}", Rc::strong_count(&sun)); // 9 个引用
         neptune.details();
 

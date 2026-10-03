@@ -9,29 +9,29 @@
 // 包含两个元素：当前项的值，以及下一项。
 // 列表末尾使用名为 `Nil` 的值表示结束。
 
+use crate::List::Cons;
+use crate::List::Nil;
+
 // TODO: 在枚举定义中使用 `Box`，使代码能够编译。
 #[derive(PartialEq, Debug)]
 enum List {
-    Cons(i32, List),
+    Cons(i32, Box<List>),
     Nil,
 }
 
 // TODO: 创建一个空的 cons 列表。
 fn create_empty_list() -> List {
-    todo!()
+    Nil
 }
 
 // TODO: 创建一个非空的 cons 列表。
 fn create_non_empty_list() -> List {
-    todo!()
+    Cons(1, Box::new(Cons(2, Box::new(Nil))))
 }
 
 fn main() {
     println!("这是一个空的 cons 列表：{:?}", create_empty_list());
-    println!(
-        "这是一个非空的 cons 列表：{:?}",
-        create_non_empty_list(),
-    );
+    println!("这是一个非空的 cons 列表：{:?}", create_non_empty_list(),);
 }
 
 #[cfg(test)]

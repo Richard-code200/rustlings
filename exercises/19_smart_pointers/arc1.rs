@@ -17,13 +17,14 @@
 
 // 请勿修改下面的代码。
 #![forbid(unused_imports)]
-use std::{sync::Arc, thread};
+use std::{char::ParseCharError, sync::Arc, thread};
 
 fn main() {
     let numbers: Vec<_> = (0..100u32).collect();
 
     // TODO: 使用 `Arc` 定义 `shared_numbers`。
     // let shared_numbers = ???;
+    let shared_numbers = Arc::new(numbers);
 
     let mut join_handles = Vec::new();
 
